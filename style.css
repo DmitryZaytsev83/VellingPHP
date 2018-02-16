@@ -1,0 +1,8 @@
+input {
+    display: block;
+}
+.container {
+    max-width: 1170px;
+    min-width: 480px;
+    margin: auto;
+}
