@@ -12,14 +12,19 @@
     </header>
     <main>
         <form method="post" action="processorder.php">
-            Покрышки, шт:
-            <input type="text" name="tireqty">
-            Масло, бут.:
-            <input type="text" name="oilqty">
-            Свечи зажигания, шт
-            <input type="text" name="sparkqty">
+            <div>Покрышки, шт:
+                <input type="text" name="tireqty" required></div>
+            <div>Масло, бут.:
+                <input type="text" name="oilqty" required></div>
+            <div>Свечи зажигания, шт
+                <input type="text" name="sparkqty" required></div>
+            <div>Адрес доставки:
+                <input type="text" name="address" required></div>
             <input type="submit">
         </form>
+        <div id="file">
+            <button type="button" name="orders">Посмотреть заказы</button>
+        </div>
     </main>
     <footer>
         <p>&copy;All rights reserved.</p>

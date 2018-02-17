@@ -1,5 +1,17 @@
 var main = function () {
     "use strict";
+    $("button").on("click", function () {
+        $.ajax({
+            url: "vieworders.php",
+            method: "post",
+            data: {
+                "name": "begin"
+            }
+        }).done(function (t) {
+            $("#file").empty();
+            $("#file").append(t);
+        })
+    })
     $("form").on("submit", function (event) {
         event.preventDefault();
         $.ajax({
@@ -8,10 +20,12 @@ var main = function () {
             data: {
                 "tireqty": $("input[name='tireqty']").val(),
                 "oilqty": $("input[name='oilqty']").val(),
-                "sparkqty": $("input[name='sparkqty']").val()
+                "sparkqty": $("input[name='sparkqty']").val(),
+                "address": $("input[name='address']").val()
             }
         }).done(function (t) {
             $("form").remove();
+            $("main").empty();
             $("main").append(t);
         })
     })
