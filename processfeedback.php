@@ -6,12 +6,12 @@ $name = trim($_POST['name']);
 $email = trim($_POST['email']);
 $feedback = trim($_POST['feedback']);
 
-$toaddress = "ushii@mail.ru";
-$subject = "Отзыв из веб-сайта";
-$mailcontent = "Имя клиента: " . str_replace("\r\n", "", $name) . "\n" . "Адрес электронной почты клиента: " . str_replace("\r\n", "", $email) . "\n" . "Комментарий клиента: " . str_replace("\r\n", "", $feedback) . "\n";
-$fromaddress = "From: webserver@example.com";
-echo $mailcontent;
-//mail($toaddress, $subject, $mailcontent, $fromaddress);
+//$toAddress = "ushii@mail.ru";
+//$subject = "Отзыв из веб-сайта";
+$mailContent = "Имя клиента: " . str_replace("\r\n", "", $name) . "\n" . "Адрес электронной почты клиента: " . str_replace("\r\n", "", $email) . "\n" . "Комментарий клиента: " . str_replace("\r\n", "", $feedback) . "\n";
+//$fromAddress = "From: webserver@example.com";
+echo $mailContent;
+//mail($toAddress, $subject, $mailContent, $fromAddress);
 ?>
 <!doctype html>
 <html lang="en">
