@@ -9,15 +9,18 @@
 <main>
     <h2>Отзыв клиента</h2>
     <h3>Пожалуйста, сообщите, что вы о нас думаете</h3>
-    <form action="processfeedback.php">
+    <form action="processfeedback.php" method="post">
         <div>
-            <p>Ваше имя:</p><input type="text" name="name">
+            <p>Ваше имя:</p>
+            <input type="text" name="name">
         </div>
         <div>
-            <p>Адрес электронной почты:</p><input type="email">
+            <p>Адрес электронной почты:</p>
+            <input type="email" name="email">
         </div>
         <div>
-            <p>Отзыв:</p><input type="textarea">
+            <p>Отзыв:</p>
+            <input type="textarea" name="feedback">
         </div>
         <div>
             <input type="submit" value="Отправить отзыв">

@@ -4,7 +4,7 @@ input {
 }
 
 main {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .container {
@@ -15,8 +15,9 @@ main {
 }
 
 form {
-    margin: 20px;
-    border: 1px solid gray;
+    /*margin: 20px;*/
+    padding: 20px;
+    /*border: 1px solid gray;*/
 }
 button {
     margin: 20px;
