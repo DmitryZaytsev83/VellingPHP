@@ -8,14 +8,17 @@ if ($_POST["name"]) {
 //    fclose($fp);
     $orders = file("$document_root/../orders/orders.txt");
     var_dump($orders[0]);
-    $orders = explode("\n", $orders[0]);
-    $number_of_orders = count($orders);
+    $orders_array = explode("\\n", $orders[0]);
+    foreach ($orders_array as $key => $value) {
+        echo $key . " - " . $value . "<br>";
+    }
+    $number_of_orders = count($orders_array);
     echo $number_of_orders."<br>";
     if($number_of_orders === 0) {
         echo "<p><strong>Ожидающие заказы отсутствуют.</br>Пожалуйста, попробуйте позже.</strong></p>";
     }
     for($i = 0; $i < $number_of_orders; $i++) {
-        echo $orders[$i]."<br>";
+        echo $orders_array[$i]."<br>";
     }
 }
 /**

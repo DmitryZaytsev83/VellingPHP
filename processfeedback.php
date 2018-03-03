@@ -5,7 +5,12 @@ foreach ($_POST as $key => $value) {
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
 $feedback = trim($_POST['feedback']);
-
+$email_array = explode("@", $email);
+foreach ($email_array as $key => $value) {
+    echo $key . " - " . $value . "<br>";
+}
+$new_email = implode('@', $email_array);
+var_dump($new_email);
 //$toAddress = "ushii@mail.ru";
 //$subject = "Отзыв из веб-сайта";
 $mailContent = "Имя клиента: " . str_replace("\r\n", "", $name) . "\n" . "Адрес электронной почты клиента: " . str_replace("\r\n", "", $email) . "\n" . "Комментарий клиента: " . str_replace("\r\n", "", $feedback) . "\n";
